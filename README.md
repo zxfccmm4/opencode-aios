@@ -1,64 +1,66 @@
 # OpenCode AIOS
 
-面向 OpenCode、Codex、GPT-5.5、Claude Code、Gemini CLI 等编程智能体的 AI 工程操作系统。
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-本仓库不是一组通用编码规则，而是一套面向智能体工程化的操作系统。
+An AI Engineering Operating System for OpenCode, Codex, GPT-5.5, Claude Code, Gemini CLI, and other coding agents.
 
-核心理念：
+This repository is not a collection of generic coding rules. It is an operating system for agentic engineering.
 
-> 智能体不应以"写代码"为目标，而应以"交付可验证的结果"为目标。
+The core idea:
 
-## 核心原则
+> Agents should not optimize for writing code. They should optimize for delivering verified outcomes.
 
-- **结果优先于代码** —— 解决真实问题，而非仅仅完成实现请求。
-- **验证优先于假设** —— 尽可能运行、检查、测试与度量。
-- **迭代优先于一蹴而就** —— 构建、观察、修复、重复。
-- **品味优先于模板** —— 避免通用的 AI 输出，让产品显得有意识、有设计感。
-- **可维护性优先于技巧** —— 让项目比你接手时更易于理解。
+## Principles
 
-## 仓库结构
+- **Outcome over code** — solve the real problem, not just the implementation request.
+- **Verification over assumption** — run, inspect, test, and measure whenever possible.
+- **Iteration over one-shot** — build, observe, repair, and repeat.
+- **Taste over templates** — avoid generic AI output; make products feel intentional.
+- **Maintainability over cleverness** — leave the project easier to understand than you found it.
+
+## Repository Structure
 
 ```text
 .
 ├── AGENTS.md
 └── .ai/
-    ├── AGENT.md          # 智能体行为与决策
-    ├── PRODUCT.md        # 产品判断
-    ├── DESIGN.md         # UI/UX 标准
-    ├── TASTE.md          # 审美与质量基准
-    ├── ARCHITECTURE.md   # 系统设计原则
-    ├── CODING.md         # 代码质量规则
-    ├── WORKFLOW.md       # 执行循环
-    ├── TESTING.md        # 测试与验证
-    ├── REVIEW.md         # 自审清单
-    ├── SECURITY.md       # 安全基线
-    ├── PERFORMANCE.md    # 性能基线
-    ├── MEMORY.md         # 长期项目记忆
-    ├── TASK_TEMPLATE.md  # 任务模板
-    ├── BUG_TEMPLATE.md   # 缺陷模板
-    └── PROMPTS.md        # 提示词
+    ├── AGENT.md           # Agent behavior and decision making
+    ├── PRODUCT.md         # Product judgment
+    ├── DESIGN.md          # UI/UX standards
+    ├── TASTE.md           # Aesthetic and quality bar
+    ├── ARCHITECTURE.md    # System design principles
+    ├── CODING.md          # Code quality rules
+    ├── WORKFLOW.md        # Execution loop
+    ├── TESTING.md         # Testing and verification
+    ├── REVIEW.md          # Self-review checklist
+    ├── SECURITY.md        # Security baseline
+    ├── PERFORMANCE.md     # Performance baseline
+    ├── MEMORY.md          # Long-term project context
+    ├── TASK_TEMPLATE.md   # Task template
+    ├── BUG_TEMPLATE.md    # Bug template
+    └── PROMPTS.md         # Prompts
 ```
 
-## 使用方式
+## How to Use
 
-将 `AGENTS.md` 与 `.ai/` 目录复制到任意项目根目录即可。
+Copy `AGENTS.md` and the `.ai/` directory into the root of any project.
 
-推荐的首条提示词：
+Recommended first prompt:
 
 ```text
-先阅读 AGENTS.md 与 .ai 操作系统文件，然后按照其中定义的工作流与验证标准实现该功能。
+Read AGENTS.md and the .ai operating system files first. Then implement this feature using the workflow and verification standards defined there.
 ```
 
-## 核心工作流
+## Core Workflow
 
 ```text
-理解 → 规划 → 实现 → 构建 → 运行 → 观察 → 验证 → 改进 → 重复
+Understand → Plan → Implement → Build → Run → Observe → Verify → Improve → Repeat
 ```
 
-真实应用是唯一的真理来源。
+The real application is the source of truth.
 
-可验证之事，必验证之。
+If something can be verified, verify it.
 
-可度量之事，必度量之。
+If something can be measured, measure it.
 
-可改进之事，必改进之。
+If something can be improved, improve it.
