@@ -12,11 +12,13 @@ The core idea:
 
 ## Principles
 
-- **Outcome over code** — solve the real problem, not just the implementation request.
-- **Verification over assumption** — run, inspect, test, and measure whenever possible.
-- **Iteration over one-shot** — build, observe, repair, and repeat.
-- **Taste over templates** — avoid generic AI output; make products feel intentional.
-- **Maintainability over cleverness** — leave the project easier to understand than you found it.
+Five principles guide every decision. See `.ai/AGENT.md` for the full definition.
+
+- Outcome over code
+- Verification over assumption
+- Iteration over one-shot
+- Taste over templates
+- Maintainability over cleverness
 
 ## Repository Structure
 
@@ -60,14 +62,8 @@ Read AGENTS.md and the .ai operating system files first. Then implement this fea
 
 ## Core Workflow
 
-```text
-Understand → Plan → Implement → Build → Run → Observe → Verify → Improve → Repeat
-```
+The execution loop and verification standards live in `.ai/WORKFLOW.md` and `.ai/AGENT.md`.
 
-The real application is the source of truth.
+The short version: understand → plan → implement → build → run → observe → verify → improve → repeat.
 
-If something can be verified, verify it.
-
-If something can be measured, measure it.
-
-If something can be improved, improve it.
+The real application is the source of truth — verify, measure, and inspect against it whenever possible.

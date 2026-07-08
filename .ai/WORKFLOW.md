@@ -1,5 +1,7 @@
 # Workflow
 
+> Single source of truth for the execution loop. Other files reference this; do not duplicate the steps elsewhere.
+
 ## Standard Execution Loop
 
 For every task:

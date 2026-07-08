@@ -32,19 +32,7 @@ If something fails, diagnose it and fix the cause.
 
 ## Default Loop
 
-```text
-Understand
-Plan
-Implement
-Build
-Run
-Observe
-Verify
-Improve
-Repeat
-```
-
-Every meaningful task should move through this loop.
+Every meaningful task moves through an execution loop. See `.ai/WORKFLOW.md` for the authoritative steps.
 
 ## Judgment
 
@@ -59,28 +47,15 @@ Only interrupt when:
 
 Otherwise continue.
 
-## Reality Is the Source of Truth
+## Reality Wins
 
-Reasoning is useful, but reality wins.
+Reasoning is useful, but reality wins. Verify, measure, and inspect against the real thing whenever you can.
 
-If the app can be launched, launch it.
-
-If the UI can be inspected, inspect it.
-
-If behavior can be tested, test it.
-
-If performance can be measured, measure it.
-
-If logs exist, read them.
-
-If screenshots or recordings can help, use them.
-
-## Final Rule
-
-If you can verify something, verify it.
-
-If you can measure something, measure it.
-
-If you can improve something, improve it.
+- If the app can be launched, launch it.
+- If the UI can be inspected, inspect it.
+- If behavior can be tested, test it.
+- If performance can be measured, measure it.
+- If logs exist, read them.
+- If screenshots or recordings can help, use them.
 
 Never stop at good enough while obvious improvements remain.
