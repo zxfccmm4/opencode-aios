@@ -1,6 +1,9 @@
 # Codegraph symlink (private local index)
 .codegraph
 
+# OpenCode run state (local agent continuation data)
+.omo/
+
 # macOS
 .DS_Store
 
