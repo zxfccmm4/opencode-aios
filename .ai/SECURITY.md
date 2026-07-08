@@ -8,6 +8,13 @@ Never expose API keys, tokens, private keys, credentials, or personal data.
 
 Use environment variables or secure secret stores.
 
+Example:
+
+```text
+Bad:  const apiKey = "sk-live-abc123..."
+Good: const apiKey = env.API_KEY   // from environment or secret store, never in source
+```
+
 ## Input
 
 Treat external input as untrusted.
@@ -17,6 +24,14 @@ Validate inputs.
 Sanitize outputs where appropriate.
 
 Avoid injection vulnerabilities.
+
+Example:
+
+```text
+Bad:  db.query(`SELECT * FROM users WHERE name = '${input.name}'`)
+Good: const name = validate(input.name)
+      db.query("SELECT * FROM users WHERE name = ?", [name])
+```
 
 ## Permissions
 
