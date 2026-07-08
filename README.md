@@ -24,26 +24,33 @@ The core idea:
 .
 ├── AGENTS.md
 └── .ai/
-    ├── AGENT.md           # Agent behavior and decision making
+    ├── AGENT.md           # Agent behavior, principles, decision rules
+    ├── WORKFLOW.md        # Execution loop
+    ├── CODING.md          # Code quality rules
+    ├── CONTEXT.md         # Tech stack, run commands, layout   (fill per project)
+    ├── CONVENTIONS.md     # Naming, commits, branches, do-nots (fill per project)
     ├── PRODUCT.md         # Product judgment
     ├── DESIGN.md          # UI/UX standards
     ├── TASTE.md           # Aesthetic and quality bar
     ├── ARCHITECTURE.md    # System design principles
-    ├── CODING.md          # Code quality rules
-    ├── WORKFLOW.md        # Execution loop
     ├── TESTING.md         # Testing and verification
     ├── REVIEW.md          # Self-review checklist
     ├── SECURITY.md        # Security baseline
     ├── PERFORMANCE.md     # Performance baseline
-    ├── MEMORY.md          # Long-term project context
+    ├── MEMORY.md          # Long-term project context        (living file)
     ├── TASK_TEMPLATE.md   # Task template
     ├── BUG_TEMPLATE.md    # Bug template
-    └── PROMPTS.md         # Prompts
+    └── PROMPTS.md         # Reusable prompts (for humans)
 ```
 
 ## How to Use
 
 Copy `AGENTS.md` and the `.ai/` directory into the root of any project.
+
+Then fill the two project-specific files:
+
+- `.ai/CONTEXT.md` — tech stack, run commands, directory layout
+- `.ai/CONVENTIONS.md` — naming, commits, branches, do-not rules
 
 Recommended first prompt:
 

@@ -1,15 +1,17 @@
 # Reusable Prompts
 
+> For humans to paste when kicking off a task. These are not agent rules — agents follow `AGENT.md` and `WORKFLOW.md` instead.
+
 ## Feature Implementation
 
 ```text
 Read AGENTS.md and the relevant .ai files first.
 
-Implement the following feature using the AIOS workflow:
+Implement the following feature:
 
 [FEATURE]
 
-Before finishing, build/run/test where possible, inspect the result, fix obvious issues, and summarize verification.
+Follow the AIOS workflow in .ai/WORKFLOW.md: plan, implement, build, verify, fix, repeat. Summarize verification before finishing.
 ```
 
 ## UI Polish
@@ -53,9 +55,7 @@ Run relevant checks and explain what improved.
 ```text
 Review this change as a senior engineer, product designer, QA engineer, performance engineer, and security engineer.
 
-Identify concrete issues.
+Use the checklist in .ai/REVIEW.md.
 
-Suggest focused improvements.
-
-Prioritize correctness, UX, maintainability, and verification.
+Identify concrete issues. Suggest focused improvements. Prioritize correctness, UX, maintainability, and verification.
 ```

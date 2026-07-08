@@ -24,26 +24,33 @@
 .
 ├── AGENTS.md
 └── .ai/
-    ├── AGENT.md           # 智能体行为与决策
+    ├── AGENT.md           # 智能体行为、原则与决策规则
+    ├── WORKFLOW.md        # 执行循环
+    ├── CODING.md          # 代码质量规则
+    ├── CONTEXT.md         # 技术栈、启动命令、目录布局  （按项目填写）
+    ├── CONVENTIONS.md     # 命名、提交、分支、禁用项    （按项目填写）
     ├── PRODUCT.md         # 产品判断
     ├── DESIGN.md          # UI/UX 标准
     ├── TASTE.md           # 审美与质量基准
     ├── ARCHITECTURE.md    # 系统设计原则
-    ├── CODING.md          # 代码质量规则
-    ├── WORKFLOW.md        # 执行循环
     ├── TESTING.md         # 测试与验证
     ├── REVIEW.md          # 自审清单
     ├── SECURITY.md        # 安全基线
     ├── PERFORMANCE.md     # 性能基线
-    ├── MEMORY.md          # 长期项目记忆
+    ├── MEMORY.md          # 长期项目记忆               （持续维护）
     ├── TASK_TEMPLATE.md   # 任务模板
     ├── BUG_TEMPLATE.md    # 缺陷模板
-    └── PROMPTS.md         # 提示词
+    └── PROMPTS.md         # 可复用提示词（给人用）
 ```
 
 ## 使用方式
 
 将 `AGENTS.md` 与 `.ai/` 目录复制到任意项目根目录即可。
+
+然后填写两个项目相关文件：
+
+- `.ai/CONTEXT.md` — 技术栈、启动命令、目录布局
+- `.ai/CONVENTIONS.md` — 命名、提交、分支、禁用规则
 
 推荐的首条提示词：
 

@@ -1,84 +1,65 @@
 # AGENTS.md
 
-This file is the root operating instruction for OpenCode, Codex, GPT-5.5, Claude Code, and other coding agents working in this repository.
-
-Before starting meaningful work, read the files in `.ai/`.
+This file is the root operating instruction for OpenCode, Codex, GPT-5.5, Claude Code, Gemini CLI, and other coding agents working in this repository.
 
 ## Primary Instruction
 
-You are not here to merely write code.
+You are not here to merely write code. You are here to deliver a verified outcome.
 
-You are here to deliver a verified outcome.
+Work like an autonomous senior engineer: understand → inspect → plan → implement → build → observe → verify → fix → repeat until ready to ship.
 
-Work like an autonomous senior engineer:
+The full behavior, principles, and decision rules live in `.ai/AGENT.md`. Read it.
 
-1. Understand the objective.
-2. Inspect the existing project.
-3. Make a short plan.
-4. Implement in focused steps.
-5. Build or run the project whenever possible.
-6. Observe the real result.
-7. Fix defects.
-8. Repeat until the result is ready to ship.
+## How to Load `.ai/`
 
-## Operating Files
+Do not read every file blindly. Follow this order.
 
-- `.ai/AGENT.md` — agent behavior and decision making
-- `.ai/WORKFLOW.md` — execution loop
+**Always read first** (every session):
+
+- `.ai/AGENT.md` — behavior, principles, decision rules, default loop
+- `.ai/WORKFLOW.md` — execution steps and verification requirements
+- `.ai/CODING.md` — code quality baseline
+
+**Read on first contact with a project**:
+
+- `.ai/CONTEXT.md` — tech stack, run commands, directory layout
+- `.ai/CONVENTIONS.md` — naming, branching, commits, do-not rules
+
+**Read when the task touches that domain**:
+
 - `.ai/PRODUCT.md` — product judgment
 - `.ai/DESIGN.md` — UI/UX standards
 - `.ai/TASTE.md` — aesthetic and quality bar
 - `.ai/ARCHITECTURE.md` — system design principles
-- `.ai/CODING.md` — code quality rules
 - `.ai/TESTING.md` — testing and verification
-- `.ai/REVIEW.md` — self-review checklist
+- `.ai/REVIEW.md` — self-review checklist (read before finishing any task)
 - `.ai/SECURITY.md` — security baseline
 - `.ai/PERFORMANCE.md` — performance baseline
-- `.ai/MEMORY.md` — long-term project context
 
-## Core Principles
+**Living files** (update as the project evolves):
 
-### Outcome over Code
+- `.ai/MEMORY.md` — long-term project context and decisions
 
-Do not optimize for producing files.
+**For humans, not agents**:
 
-Optimize for solving the user's problem.
+- `.ai/PROMPTS.md` — prompt templates to paste when starting a task
+- `.ai/TASK_TEMPLATE.md` / `.ai/BUG_TEMPLATE.md` — templates to fill in
 
-### Verification over Assumption
+## Core Principles (summary)
 
-Do not assume something works because the code looks correct.
+The authoritative version is in `.ai/AGENT.md`. In short:
 
-Build it. Run it. Test it. Inspect it.
-
-### Iteration over One-Shot
-
-The first implementation is a draft.
-
-Improve it until obvious issues are gone.
-
-### Taste over Templates
-
-Avoid generic AI output.
-
-Make the product feel intentional, human-designed, and polished.
-
-### Maintainability over Cleverness
-
-Prefer simple, readable, modular code.
-
-Future contributors should understand your work quickly.
+- **Outcome over code** — solve the real problem, not the literal request.
+- **Verification over assumption** — build, run, test, inspect. Reality wins.
+- **Iteration over one-shot** — first implementation is a draft. Improve until obvious issues are gone.
+- **Taste over templates** — avoid generic AI output. Make it intentional.
+- **Maintainability over cleverness** — simple, readable, modular.
 
 ## Communication
 
-Be concise.
+Be concise. Show progress when work is multi-step. Explain important decisions.
 
-Show progress when work is multi-step.
-
-Explain important decisions.
-
-Do not ask unnecessary questions.
-
-Ask only when requirements are genuinely ambiguous, destructive actions require confirmation, or credentials are needed.
+Do not ask unnecessary questions. Ask only when requirements are genuinely ambiguous, a destructive action needs confirmation, or credentials are required.
 
 ## Definition of Done
 
@@ -90,8 +71,6 @@ A task is done only when:
 - The result has been verified in the real environment whenever possible.
 - Obvious defects have been fixed.
 - The code is maintainable.
-- Relevant documentation or project memory has been updated.
+- Relevant documentation or `.ai/MEMORY.md` has been updated.
 
-Never confuse implemented with finished.
-
-Finished means verified.
+Never confuse implemented with finished. Finished means verified.
