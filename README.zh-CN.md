@@ -2,7 +2,7 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-面向 OpenCode、Codex、GPT-5.5、Claude Code、Gemini CLI 等编程智能体的 AI 工程操作系统。
+面向 OpenCode、Codex、Claude Code、Gemini CLI 等编程智能体的 AI 工程操作系统。
 
 本仓库不是一组通用编码规则，而是一套面向智能体工程化的操作系统。
 
@@ -24,8 +24,12 @@
 
 ```text
 .
-├── AGENTS.md
+├── AGENTS.md              # 根入口（OpenCode、Codex 等原生读取）
+├── CLAUDE.md              # Claude Code 入口（指向 AGENTS.md）
+├── GEMINI.md              # Gemini CLI 入口（指向 AGENTS.md）
+├── install.sh             # 安装 / 更新脚本
 └── .ai/
+    ├── VERSION            # AIOS 版本标记
     ├── AGENT.md           # 智能体行为、原则与决策规则
     ├── WORKFLOW.md        # 执行循环
     ├── CODING.md          # 代码质量规则
@@ -47,12 +51,27 @@
 
 ## 使用方式
 
-将 `AGENTS.md` 与 `.ai/` 目录复制到任意项目根目录即可。
+在你的项目根目录上运行安装脚本：
+
+```bash
+git clone https://github.com/zxfccmm4/opencode-aios.git
+cd opencode-aios
+./install.sh /path/to/your/project
+```
+
+也可以手动复制 `AGENTS.md`、`CLAUDE.md`、`GEMINI.md` 与 `.ai/` 目录。
 
 然后填写两个项目相关文件：
 
 - `.ai/CONTEXT.md` — 技术栈、启动命令、目录布局
 - `.ai/CONVENTIONS.md` — 命名、提交、分支、禁用规则
+
+后续升级时重新运行 `./install.sh /path/to/your/project --force`，脚本只刷新系统文件，绝不覆盖你已填写的 `CONTEXT.md`、`CONVENTIONS.md` 与 `MEMORY.md`。
+
+### 入口文件
+
+- OpenCode 与 Codex 原生读取 `AGENTS.md`。
+- Claude Code 读取 `CLAUDE.md`，Gemini CLI 读取 `GEMINI.md` —— 两者都是指向 `AGENTS.md` 的轻量入口，保证所有智能体遵循同一套指令。
 
 推荐的首条提示词：
 
@@ -64,6 +83,6 @@
 
 执行循环与验证标准定义在 `.ai/WORKFLOW.md` 与 `.ai/AGENT.md`。
 
-简要版：理解 → 规划 → 实现 → 构建 → 运行 → 观察 → 验证 → 改进 → 重复。
+简要版：理解 → 检查 → 规划 → 实现 → 构建 → 观察 → 验证 → 修复 → 重复。
 
 真实应用是唯一的真理来源 —— 尽可能去验证、度量与检查。

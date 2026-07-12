@@ -2,7 +2,7 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-An AI Engineering Operating System for OpenCode, Codex, GPT-5.5, Claude Code, Gemini CLI, and other coding agents.
+An AI Engineering Operating System for OpenCode, Codex, Claude Code, Gemini CLI, and other coding agents.
 
 This repository is not a collection of generic coding rules. It is an operating system for agentic engineering.
 
@@ -24,8 +24,12 @@ Five principles guide every decision. See `.ai/AGENT.md` for the full definition
 
 ```text
 .
-├── AGENTS.md
+├── AGENTS.md              # Root entry point (read natively by OpenCode, Codex, ...)
+├── CLAUDE.md              # Entry point for Claude Code (points to AGENTS.md)
+├── GEMINI.md              # Entry point for Gemini CLI (points to AGENTS.md)
+├── install.sh             # Install / update AIOS in a project
 └── .ai/
+    ├── VERSION            # AIOS version marker
     ├── AGENT.md           # Agent behavior, principles, decision rules
     ├── WORKFLOW.md        # Execution loop
     ├── CODING.md          # Code quality rules
@@ -47,12 +51,27 @@ Five principles guide every decision. See `.ai/AGENT.md` for the full definition
 
 ## How to Use
 
-Copy `AGENTS.md` and the `.ai/` directory into the root of any project.
+Run the installer against your project root:
+
+```bash
+git clone https://github.com/zxfccmm4/opencode-aios.git
+cd opencode-aios
+./install.sh /path/to/your/project
+```
+
+Or copy `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and the `.ai/` directory manually.
 
 Then fill the two project-specific files:
 
 - `.ai/CONTEXT.md` — tech stack, run commands, directory layout
 - `.ai/CONVENTIONS.md` — naming, commits, branches, do-not rules
+
+To update an installed copy later, re-run the installer with `--force`. It refreshes the system files but never overwrites your filled-in `CONTEXT.md`, `CONVENTIONS.md`, and `MEMORY.md`.
+
+### Entry Points
+
+- OpenCode and Codex read `AGENTS.md` natively.
+- Claude Code reads `CLAUDE.md` and Gemini CLI reads `GEMINI.md` — both are thin pointers to `AGENTS.md`, so every agent follows the same instructions.
 
 Recommended first prompt:
 
@@ -64,6 +83,6 @@ Read AGENTS.md and the .ai operating system files first. Then implement this fea
 
 The execution loop and verification standards live in `.ai/WORKFLOW.md` and `.ai/AGENT.md`.
 
-The short version: understand → plan → implement → build → run → observe → verify → improve → repeat.
+The short version: understand → inspect → plan → implement → build → observe → verify → fix → repeat.
 
 The real application is the source of truth — verify, measure, and inspect against it whenever possible.
