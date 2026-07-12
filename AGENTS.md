@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file is the root operating instruction for OpenCode, Codex, GPT-5.5, Claude Code, Gemini CLI, and other coding agents working in this repository.
+This file is the root operating instruction for OpenCode, Codex, Claude Code, Gemini CLI, and other coding agents working in this repository.
 
 ## Primary Instruction
 

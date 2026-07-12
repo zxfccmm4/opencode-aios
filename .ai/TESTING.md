@@ -1,5 +1,7 @@
 # Testing and Verification
 
+> Single source of truth for verification methods. Other files reference this list; do not duplicate it elsewhere.
+
 ## Verification Mindset
 
 Never assume correctness.
@@ -23,6 +25,7 @@ Use the strongest practical option:
 - screenshot inspection
 - log inspection
 - performance measurement
+- frame or transition inspection for UI work
 
 ## UI Verification
 

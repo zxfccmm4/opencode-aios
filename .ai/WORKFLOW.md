@@ -47,18 +47,9 @@ Do not introduce broad rewrites unless the task requires them.
 
 Verification is mandatory.
 
-Choose the strongest practical verification method:
+Choose the strongest practical method for the change — tests, type checks, builds, manual runs, screenshots, logs, profiling.
 
-- Unit tests
-- Integration tests
-- Type checks
-- Build checks
-- Manual app run
-- Simulator/browser interaction
-- Screenshot inspection
-- Logs
-- Profiling
-- Frame or transition inspection for UI work
+The authoritative menu of verification methods, plus UI and bug-fix procedures, lives in `.ai/TESTING.md`.
 
 ## Reflection
 
